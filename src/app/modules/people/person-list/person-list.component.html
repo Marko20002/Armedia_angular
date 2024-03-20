@@ -1,0 +1,24 @@
+<div class="container ">
+ <div class="row">
+    <div class="col-4">
+      <ul class="list-group">
+        <li
+          [relativeTo]="route"
+          [routerLink]="[person.id]"
+          class="list-group-item"
+          *ngFor="let person of persons"
+        >
+          {{ person.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+

@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a  class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4">Simple header</span>
+    </a>
+    <div class="user-info">Logged in user <button class="btn btn-primary" (click)="openCreatePersonForm()">Create Person</button> <button  class="btn btn-primary" (click)="openRegisterPage()">Register</button></div>
+  </header>
+  <!--   
+  <div class="row">
+    <div class="col-2 bg-dark text-white vh-100 position-fixed">
+      <div class="p-3">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li (click)="activeNavMenu = 'people'">
+            <a
+              [ngClass]="activeNavMenu === 'people' ? 'activeNavMenu' : 'notActive'"
+              class="nav-link text-white custom-nav-menu-item"
+              routerLink="/people"
+              >People</a
+            >
+          </li>
+          <li (click)="activeNavMenu = 'cases'">
+            <a
+              [ngClass]="activeNavMenu === 'cases' ? 'activeNavMenu' : ''"
+              class="nav-link text-white custom-nav-menu-item"
+              routerLink="/cases"
+              >Cases</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-8 d-flex offset-2">
+      <div class="p-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div> -->
+  <div id="nav-bar">
+    <input id="nav-toggle" type="checkbox" />
+    <div><hr></div>
+    <div id="nav-content">
+      <div class="nav-button" routerLink="/people">
+        <i class="fas fa-palette"></i><span>People</span>
+      </div>
+      <div class="nav-button" routerLink="/cases">
+        <i class="fas fa-images" ></i><span>Cases</span>
+      </div>
+      <div class="nav-button">
+        <i class="fas fa-thumbtack"></i><span>Nesto</span>
+      </div>
+      <hr />
+      <div class="nav-button">
+        <i class="fas fa-heart"></i><span>Nesto2</span>
+      </div>
+      <div class="nav-button">
+        <i class="fas fa-chart-line"></i><span>Nesto3</span>
+      </div>
+      <div class="nav-button">
+        <i class="fas fa-fire"></i><span>Nesto4</span>
+      </div>
+      <div class="nav-button">
+        <i class="fas fa-magic"></i><span>Nesto5</span>
+      </div>
+      <hr />
+      
+      <div id="nav-content-highlight"></div>
+    </div>
+    <input id="nav-footer-toggle" type="checkbox" />
+  </div>
+  <div class="col-2 d-flex offset-3">
+    <div class="p-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- <footer
+    class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+  >
+    <div class="col-md-4 d-flex align-items-center">
+      <a
+        href="/"
+        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+      >
+        <svg class="bi" width="30" height="24">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+    </div>
+  </footer> -->
+</div>

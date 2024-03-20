@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">
+          Person Details
+        </li>
+        <li class="list-group-item">Name: {{ person.name }}</li>
+        <li class="list-group-item">Family Name: {{ person.familyName }}</li>
+        <li class="list-group-item">Date of Birth: {{ person.dateOfBirth }}</li>
+        <li class="list-group-item">
+          Place of Birth: {{ person.placeOfBirth }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1" class="col text-center">
+          <button ngbNavLink>Contact Methods</button>
+          <ng-template ngbNavContent>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h5>{{ person.name }}</h5>
+                <ul>
+                  <li
+                    class="list-group-item"
+                    *ngFor="let contactMethod of person.contactMethods"
+                  >
+                    {{ contactMethod.type }}: {{ contactMethod.value }}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button
+              *ngIf="active === 1"
+              class="btn btn-lg btn-outline-primary"
+              (click)="openContactMethodForm(true)"
+            >
+              Add Contact Method
+            </button>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2" class="col text-center">
+          <button ngbNavLink>Addresses</button>
+          <ng-template ngbNavContent>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h5>{{ person.name }}</h5>
+                <ul>
+                  <li
+                    class="list-group-item"
+                    *ngFor="let address of person.addresses"
+                  >
+                    {{ address.streetAddress }}, {{ address.city }},
+                    {{ address.zip }}, {{ address.country }}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button
+              *ngIf="active === 2"
+              class="btn btn-lg btn-outline-primary"
+              (click)="openAddressForm(true)"
+            >
+              Add Address
+            </button>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+  </div>
+</div>

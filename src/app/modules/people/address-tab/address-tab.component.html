@@ -1,0 +1,42 @@
+<html lang="en">
+  <h1>Postal Address Entry Form</h1>
+  <form #postalAddressForm="ngForm" (submit)="submitForm()">
+    <label for="streetAddress">Street Address:</label><br />
+    <input
+      type="text"
+      id="streetAddress"
+      name="streetAddress"
+      [(ngModel)]="postalAddress.streetAddress"
+      required
+    /><br />
+
+    <label for="city">City:</label><br />
+    <input
+      type="text"
+      id="city"
+      name="city"
+      [(ngModel)]="postalAddress.city"
+      required
+    /><br />
+
+    <label for="zip">Zip:</label><br />
+    <input
+      type="text"
+      id="zip"
+      name="zip"
+      [(ngModel)]="postalAddress.zip"
+      required
+    /><br />
+
+    <label for="country">Country:</label><br />
+    <input
+      type="text"
+      id="country"
+      name="country"
+      [(ngModel)]="postalAddress.country"
+      required
+    /><br />
+
+    <button type="submit" [disabled]="postalAddressForm.invalid">Submit</button>
+  </form>
+</html>

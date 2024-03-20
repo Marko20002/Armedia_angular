@@ -1,0 +1,28 @@
+<html lang="en">
+  <h1>User Registration Form</h1>
+  <form #registerForm="ngForm" (submit)="onSignUp()">
+    <label for="userName">Username:</label><br />
+    <input
+      type="text"
+      id="userName"
+      name="userName"
+      required
+      [(ngModel)]="user.username"
+    /><br />
+    <label for="password">Password:</label><br />
+    <input
+      type="password"
+      id="password"
+      name="password"
+      required
+      [(ngModel)]="user.password"
+    /><br />
+    <label for="role">Role:</label><br />
+    <select id="role" name="role" [(ngModel)]="user.role">
+      <option value="USER">User</option>
+      <option value="ADMIN">Admin</option>
+    </select><br />
+
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</html>

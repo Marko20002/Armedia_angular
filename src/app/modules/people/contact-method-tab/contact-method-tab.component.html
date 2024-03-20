@@ -1,0 +1,30 @@
+<html lang="en">
+  <h1>Contact Method Entry Form</h1>
+  <form #contactMethodForm="ngForm" (submit)="submitForm()">
+    <label for="type">Contact Method Type:</label><br />
+    <select id="type" name="type" [(ngModel)]="contactMethods.type" required>
+      <option value="EMAIL">Email</option>
+      <option value="PHONE">Phone</option>
+    </select><br />
+
+    <label for="value">Value:</label><br />
+    <input
+      type="text"
+      id="value"
+      name="value"
+      [(ngModel)]="contactMethods.value"
+      required
+    /><br />
+
+    <label for="description">Description:</label><br />
+    <input
+      type="text"
+      id="description"
+      name="description"
+      [(ngModel)]="contactMethods.description"
+      required
+    /><br />
+
+    <button type="submit" [disabled]="contactMethodForm.invalid">Submit</button>
+  </form>
+</html>

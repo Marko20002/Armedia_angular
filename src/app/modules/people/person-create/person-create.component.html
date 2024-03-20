@@ -1,0 +1,79 @@
+<!-- <h1>Create Person</h1>
+<form>
+  <label for="name">Name:</label><br />
+  <input
+    type="text"
+    id="name"
+    name="name"
+    [(ngModel)]="person.name"
+    required
+  /><br />
+
+  <label for="familyName">Family Name:</label><br />
+  <input
+    type="text"
+    id="familyName"
+    name="familyName"
+    [(ngModel)]="person.familyName"
+    required
+  /><br />
+
+  <label for="dateOfBirth">Date of Birth:</label><br />
+  <input
+    type="date"
+    id="dateOfBirth"
+    name="dateOfBirth"
+    [(ngModel)]="person.dateOfBirth"
+    required
+  /><br />
+
+  <label for="placeOfBirth">Place of Birth:</label><br />
+  <input
+    type="text"
+    id="placeOfBirth"
+    name="placeOfBirth"
+    [(ngModel)]="person.placeOfBirth"
+    required
+  /><br />
+
+  <h2>Contact Methods</h2>
+  <div>
+    <label for="contactType{{ i }}">Contact Method Type:</label><br />
+    <select
+      id="contactType{{ i }}"
+      name="contactType{{ i }}"
+      [(ngModel)]="contactMethod.type"
+      required
+    >
+      <option value="EMAIL">Email</option>
+      <option value="PHONE">Phone</option></select
+    ><br />
+
+    <label for="contactValue{{ i }}">Value:</label><br />
+    <input
+      type="text"
+      id="contactValue{{ i }}"
+      name="contactValue{{ i }}"
+      [(ngModel)]="contactMethod.value"
+      required
+    /><br />
+
+    <label for="contactDescription{{ i }}">Description:</label><br />
+    <input
+      type="text"
+      id="contactDescription{{ i }}"
+      name="contactDescription{{ i }}"
+      [(ngModel)]="contactMethod.description"
+      required
+    /><br />
+  </div>
+  <button type="button" (click)="addContactMethod()">Add Contact Method</button>
+
+  <h2>Addresses</h2>
+  <div *ngFor="let address of person.addresses; let i = index">
+    <!-- Add fields for address -->
+  </div>
+  <button type="button" (click)="addAddress()">Add Address</button>
+
+  <button type="submit">Submit</button>
+</form> -->
